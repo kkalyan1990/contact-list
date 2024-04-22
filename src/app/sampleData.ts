@@ -3,7 +3,6 @@ export const  contactList: Array<any> = [
     {id: 2, firstName: 'Scott', lastName: 'Anderson', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 3, firstName: 'Mary', lastName: 'Arthur', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 4, firstName: 'Harold', lastName: 'Curtis', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
-    {id: 4, firstName: 'Harold', lastName: 'Curtis', email: 'harold.curtis@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 5, firstName: 'Stuart', lastName: 'Asmussen', email: 'stuart.asmussen@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 6, firstName: 'Mac', lastName: 'Barter', email: 'mac.barter@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 7, firstName: 'Neal', lastName: 'Becker', email: 'neal.Becker@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
