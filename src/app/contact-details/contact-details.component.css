@@ -1,0 +1,79 @@
+.name-container, .details-form {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 100px;
+    font-weight: 300;
+    padding-left: 10%;
+}
+.details-form {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 50px;
+    font-weight: 300;
+    padding-left: 10%;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 10%;
+}
+.details-row {
+    display: flex;
+    flex-direction: row;
+    padding-left: 7%;
+}
+.details-row:not(:last-child) {
+    border-bottom: 1px solid rgb(0 0 0 / 25%);
+}
+.details-label {
+    width: 10%;
+    text-align: right;
+    margin-right: 2%;
+    color: rgb(118 118 118);
+}
+.nameinput {
+    width: 80%;
+    margin-right: 20px;
+    height: 50px;
+    border: 1px solid rgb(0 0 0 / 25%);
+}
+.details-input {
+    width: 50%;
+    margin-right: 20px;
+    height: 25px;
+    border: 1px solid rgb(0 0 0 / 25%);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.details-textarea {
+    width: 50%;
+    margin-right: 20px;
+    height: 100px;
+    border: 1px solid rgb(0 0 0 / 25%);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.namelabel, .nameinput {
+    padding-right: 10px;
+}
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details-form {
+    margin-top: 5%;
+}
+.details-form > p {
+    display: inline-flex;
+    flex-direction: column;
+}
+.namefieldlabel {
+    color: rgb(118 118 118);
+    font-size: 1rem;
+}
+a[name='email'] {
+    color:rgb(16 105 214);
+    cursor: pointer;
+}

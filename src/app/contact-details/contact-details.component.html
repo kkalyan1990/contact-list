@@ -1,0 +1,67 @@
+
+<ng-container *ngIf="isViewMode">
+    <div class="name-container">
+        <label class="namelabel">{{contactDetails.firstName}}</label>
+        <label class="namelabel">{{contactDetails.lastName}}</label>
+    </div>
+    <div class="contact-details">
+        <p class="details-row">
+            <label for="phone" class="details-label">phone</label>
+            <label name="phone">{{contactDetails.phone}}</label>
+        </p>
+        <p class="details-row">
+            <label for="email" class="details-label">email</label>
+            <a name="email" href= "mailto: {{contactDetails.email}}">{{contactDetails.email}} </a>
+        </p>
+        <p class="details-row">
+            <label for="address" class="details-label">address</label>
+            <label name="address">{{contactDetails.address}}</label>
+        </p>
+        <p class="details-row">
+            <label for="note" class="details-label">note</label>
+            <label name="note">{{contactDetails.note}}</label>
+        </p>
+    
+    </div>
+</ng-container>
+
+<form #f="ngForm" (ngSubmit)="saveChanges(f)">
+<ng-container *ngIf="(!isViewMode || isNewContact)" ngModelGroup="contactDetails">
+    <div class="details-form">
+        <p>
+            <input type="text" class="nameinput" [ngModel]="contactDetails.firstName" name="firstName"/>
+            <label for="firstName" class="namefieldlabel">first name</label>
+        </p>
+        <p>
+            <input type="text" class="nameinput" [ngModel]="contactDetails.lastName" name="lastName"/>
+            <label for="firstName" class="namefieldlabel">last name</label>
+        </p>
+        
+    </div>
+    <div class="contact-details">
+        <p class="details-row">
+            <label for="phone" class="details-label">phone</label>
+            <input type="text" class="details-input" [ngModel]="contactDetails.phone" name="phone"/>
+        </p>
+        <p class="details-row">
+            <label for="email" class="details-label">email</label>
+            <input type="email" class="details-input" [ngModel]="contactDetails.email" name="email"/>
+        </p>
+        <p class="details-row">
+            <label for="address" class="details-label">address</label>
+            <textarea class="details-textarea" [ngModel]="contactDetails.address" name="address"></textarea>
+        </p>
+        <p class="details-row">
+            <label for="note" class="details-label">note</label>
+            <textarea  class="details-textarea" [ngModel]="contactDetails.note" name="note"></textarea>
+        </p>
+    
+    </div>
+</ng-container>
+
+<div class="button-row">
+    <button type="button" class="btn btn-light" (click)="addNewContact()" >+</button>
+    <button type="submit" class="btn btn-light" *ngIf="(!isViewMode || isNewContact)">Done</button>
+    <button type="button" (click)="updateEditMode()" class="btn btn-light" *ngIf="(isViewMode && !isNewContact)">Edit</button>
+</div>
+</form>

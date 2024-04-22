@@ -1,0 +1,47 @@
+.scrollcontainer {
+    background-color: rgb(221 222 224);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-card {
+    width: 100%;
+    padding: 0 10%;
+    border-radius: 5px;
+    min-height: 30px;
+    color: rgb(31 31 31);    
+}
+.contact-card:hover, .activeContact{
+    background-color: rgb(0 90 219);
+    cursor: pointer;
+    color: white;
+}
+.deleteicon {
+    background-color: red;
+    color: white;
+    width: 20%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: larger;
+    width: 20px;
+    height: 20px;
+    margin: 2% 2% 0 0;
+}
+.activeContact > .contact-card {
+    color: white;
+}
+.alphabet-limiter {
+    border-bottom: 1px solid rgb(188 188 188 / 25%);
+    text-align: left;
+    margin-left: 5%;
+    color:rgb(107 107 107);
+}
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
