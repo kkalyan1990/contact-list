@@ -1,4 +1,6 @@
-export const  contactList: Array<any> = [
+import { ContactObject } from "./contact-object";
+
+export const  contactList: Array<ContactObject> = [
     {id: 1, firstName: 'Adam', lastName: 'Acer', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 2, firstName: 'Scott', lastName: 'Anderson', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},
     {id: 3, firstName: 'Mary', lastName: 'Arthur', email: 'adm.acer@gmail.com', phone: '9876543210', address:'132, My Street, Kingston, New York 12401', note: 'Adam\'s NY address'},

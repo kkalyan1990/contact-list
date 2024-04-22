@@ -20,11 +20,11 @@ export class LeftPanelComponent {
   private _contactList: Array<ContactObject> = [];
   showDeleteIcon: boolean = false;
   contactId: string = '';
-  sortedContactList: any = [];
-  contactList: any = [];
+  sortedContactList: Array<any> = [];
+  contactList: Array<ContactObject> = [];
   private _isViewMode: boolean = true;
-  contactDetails$: Observable<any>;
-  contactListArr$: Observable<any>;
+  contactDetails$: Observable<ContactObject>;
+  contactListArr$: Observable<Array<ContactObject>>;
   @Output() myEvent = new EventEmitter<boolean>();
   @Input()
   set isViewMode(val: boolean){
@@ -34,19 +34,10 @@ export class LeftPanelComponent {
     return this._isViewMode;
   }
 
-  // @Input()
-  // set contactList(val: any){
-  //   this._contactList = val;  
-  //   this.sortContacts();
-  // } 
-  // get contactList(): any { 
-  //   return this._contactList;
-  // }
-
   constructor(private store: Store<SelectedContact>, private contactService : ContactserviceService){
     this.contactDetails$ = store.select('selectedContact');
     this.contactListArr$ = store.select('contactList');
-    this.contactDetails$.subscribe((data: SelectedContact) => {
+    this.contactDetails$.subscribe((data: any) => {
        this.contactId = data.selectedContact?.id.toString();
     }) 
     this.contactListArr$.subscribe((data: any) => {
@@ -66,17 +57,23 @@ export class LeftPanelComponent {
 
 
   deleteContact(id: string) {
-    this.contactService.deleteContact(id).subscribe(res => {
+    this.contactService.deleteContact(id).subscribe((res : Boolean) => {
       console.log(res);
+      if(res) {
+        alert('Contact delete successful');
+      }
     });
   }
 
   updateEditMode() {
     this.myEvent.emit(this.isViewMode);
   }
+  /**
+   * Function to to sort and group contacts based on contact's first Name starting letter
+   */
 
   sortContacts() {
-    let sortedContactsObj = this.contactList.reduce((contactGroup: any, contactObj:any) => {
+    let sortedContactsObj = this.contactList.reduce((contactGroup: any, contactObj:ContactObject) => {
       let group = contactObj.firstName[0].toUpperCase();
       if(!contactGroup[group]){
         contactGroup[group] = {group, children: [contactObj]}

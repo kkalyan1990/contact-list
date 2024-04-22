@@ -4,7 +4,7 @@ import { SelectedContact } from "../selected-contact";
 import { ContactObject } from "../contact-object";
 import { contactList } from "../sampleData";
 
-
+// Initialize state with empty selectedContact & contactList from sampleData
 export const initialState: SelectedContact = { selectedContact: new ContactObject(), contactList: contactList };
 
 export const contactReducer = createReducer(

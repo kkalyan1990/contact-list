@@ -19,7 +19,7 @@ export class AppComponent {
   isViewMode = true;
 
   contactDetails$: Observable<ContactObject>;
-  contactListArr$: Observable<any>;
+  contactListArr$: Observable<Array<ContactObject>>;
   
   contactList : Array<ContactObject> = [];
   constructor(private store: Store<SelectedContact>, private contactService : ContactserviceService){

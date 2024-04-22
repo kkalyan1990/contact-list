@@ -31,9 +31,9 @@ export class ContactDetailsComponent {
     this.contactDetails$.subscribe((data: SelectedContact) => {
      this.contactDetails = data.selectedContact;
     })
-    this.contactListArr$.subscribe((data: any) => {
-      // console.log(data);
-     })
+    // this.contactListArr$.subscribe((data: any) => {
+    //   // console.log(data);
+    //  })
   }
 
   saveChanges(contactForm: NgForm) {
